@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :assignments
   resources :tags
   resources :testimonies
   root 'home#index'
