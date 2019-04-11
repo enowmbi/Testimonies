@@ -10,6 +10,7 @@ class TestimoniesController < ApplicationController
   # GET /testimonies/1
   # GET /testimonies/1.json
   def show
+    @assignment = Assignment.where(user_id: params[:user_id],testimony_id: params[:testimony_id])
   end
 
   # GET /testimonies/new
@@ -27,9 +28,15 @@ class TestimoniesController < ApplicationController
     @testimony = Testimony.new(testimony_params)
 
     respond_to do |format|
-      if @testimony.save
+      if @testimony.save 
         format.html { redirect_to @testimony, notice: 'Testimony was successfully created.' }
         format.json { render :show, status: :created, location: @testimony }
+        # params[:tag_ids].each do |tag_id| 
+          # if(tag_id != "")
+          # @assignment = Assignment.new(tag_id: tag_id ,testimony_id: params[:id])
+          # @assignment.save
+          # end
+        # end
       else
         format.html { render :new }
         format.json { render json: @testimony.errors, status: :unprocessable_entity }
@@ -62,13 +69,13 @@ class TestimoniesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_testimony
-      @testimony = Testimony.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_testimony
+    @testimony = Testimony.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def testimony_params
-      params.require(:testimony).permit(:title, :description, :user_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def testimony_params
+    params.require(:testimony).permit(:title, :description, :user_id, tag_ids:[])
+  end
 end

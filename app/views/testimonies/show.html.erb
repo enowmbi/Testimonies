@@ -12,8 +12,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @testimony.user %>
+  <%= @testimony.user.name %>
 </p>
 
-<%= link_to 'Edit', edit_testimony_path(@testimony) %> |
-<%= link_to 'Back', testimonies_path %>
+<%= link_to 'Back', testimonies_path, class:"btn btn-secondary" %> |
+<%= link_to 'Edit', edit_testimony_path(@testimony),class:"btn btn-primary" %> 

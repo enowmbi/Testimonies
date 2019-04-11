@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Testimonies</h1>
-
-<table>
+<div class="text-center">
+  <%= link_to 'New Testimony', new_testimony_path, class:"btn btn-primary m-4" %>
+  </div>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>Title</th>
@@ -17,10 +19,10 @@
       <tr>
         <td><%= testimony.title %></td>
         <td><%= testimony.description %></td>
-        <td><%= testimony.user %></td>
-        <td><%= link_to 'Show', testimony %></td>
-        <td><%= link_to 'Edit', edit_testimony_path(testimony) %></td>
-        <td><%= link_to 'Destroy', testimony, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= testimony.user.name %></td>
+        <td><%= link_to 'Show', testimony, class:"btn btn-primary btn-sm"%></td>
+        <td><%= link_to 'Edit', edit_testimony_path(testimony),class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Destroy', testimony, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Testimony', new_testimony_path %>
+<%= link_to 'New Testimony', new_testimony_path, class:"btn btn-primary m-4" %>
