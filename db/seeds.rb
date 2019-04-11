@@ -200,3 +200,19 @@ Country.destroy_all if Country.count > 0
 		Country.where(:name => param).first_or_create
 	end
 
+  #clear tags of previous tags entered 
+  Tag.destroy_all if Tag.count > 0
+  [
+  "Healing",
+  "Prosperity",
+  "Fasting",
+  "Prayers",
+  "Mantle",
+  "Communion",
+  "Cameroon",
+  "Praise",
+  "Anointing",
+  "Blood of Sprinkling",
+  "Covenant Hour of Prayer"].each do |param|
+    Tag.where(:name => param).first_or_create
+  end
