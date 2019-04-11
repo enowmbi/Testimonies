@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tags</h1>
-
-<table>
+<div class="text-center">
+<%= link_to 'New Tag', new_tag_path,class:"btn btn-primary mb-4" %>
+</div>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +18,9 @@
       <tr>
         <td><%= tag.name %></td>
         <td><%= tag.description %></td>
-        <td><%= link_to 'Show', tag %></td>
-        <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-        <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', tag, class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_tag_path(tag), class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Tag', new_tag_path %>
+<%= link_to 'New Tag', new_tag_path,class:"btn btn-primary m-4" %>
