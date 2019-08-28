@@ -2,7 +2,7 @@
 
 <h1>Assignments</h1>
 
-<table>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>Tag</th>
@@ -14,11 +14,11 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
-        <td><%= assignment.tag %></td>
-        <td><%= assignment.testimony %></td>
-        <td><%= link_to 'Show', assignment %></td>
-        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= assignment.tag.name %></td>
+        <td><%= assignment.testimony.title %></td>
+        <td><%= link_to 'Show', assignment,class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment),class:"btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Assignment', new_assignment_path %>
+<%# <%= link_to 'New Assignment', new_assignment_path %1> %>
