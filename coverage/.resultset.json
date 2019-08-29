@@ -556,9 +556,11 @@
       "/home/enow/Projects/ruby_and_rails/Itestify/app/models/country.rb": [
         1,
         1,
+        null,
+        1,
         null
       ]
     },
-    "timestamp": 1567089650
+    "timestamp": 1567091156
   }
 }
