@@ -37,10 +37,15 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 #Add gems for bootstrap and jquery 
-gem 'bootstrap','~>4.1.0'
+gem 'bootstrap','>=4.3.1'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'popper_js'
+gem 'nokogiri','>=1.10.4'
+gem 'spec_writer'
+gem 'factory_bot_rails'
+
+
 
 #Add devise for authentication
 gem 'devise'
