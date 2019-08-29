@@ -553,6 +553,20 @@
         1,
         null
       ],
+      "/home/enow/Projects/ruby_and_rails/Itestify/app/models/tag.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/enow/Projects/ruby_and_rails/Itestify/app/models/assignment.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/home/enow/Projects/ruby_and_rails/Itestify/app/models/testimony.rb": [
         1,
         1,
@@ -568,22 +582,8 @@
         null,
         1,
         null
-      ],
-      "/home/enow/Projects/ruby_and_rails/Itestify/app/models/assignment.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/enow/Projects/ruby_and_rails/Itestify/app/models/tag.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
       ]
     },
-    "timestamp": 1567093549
+    "timestamp": 1567099966
   }
 }
