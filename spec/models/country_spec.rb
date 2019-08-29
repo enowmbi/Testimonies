@@ -7,7 +7,10 @@ RSpec.describe Country, type: :model do
   end
 
   describe "Validators" do
-
+    it "ensures the presence of name" do 
+      country = FactoryBot.build(:country,name: nil)
+      expect(country).not_to be_valid
+    end
   end
 
   describe "Associations" do
@@ -38,7 +41,7 @@ RSpec.describe Country, type: :model do
   end
 
 
-  describe "Behavior" do
-    pending "add some examples to #{__FILE__} for behaviours or delete the 'Behaviour' test there."
-  end
+  # describe "Behavior" do
+    # pending "add some examples to #{__FILE__} for behaviours or delete the 'Behaviour' test there."
+  # end
 end
