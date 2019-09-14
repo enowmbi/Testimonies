@@ -48,7 +48,7 @@ gem 'factory_bot_rails'
 
 
 #Add devise for authentication
-gem 'devise'
+gem 'devise','>=4.7.1'
 gem 'devise-bootstrap-views', '~> 1.0'
 
 
