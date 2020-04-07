@@ -22,5 +22,4 @@ require("channels");
 import "jquery";
 import "bootstrap";
 import "popper.js";
-console.log('Hello World from Webpacker');
 
