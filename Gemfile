@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 gem 'image_processing', '~> 1.2'
  
+#Use webpacker to manage js assets
+gem 'webpacker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
